@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0cw0if232oui"]
+
+[ext_resource type="Script" path="res://serras/serrinha.gd" id="1_u5i51"]
+[ext_resource type="Texture2D" uid="uid://xjswu2j7dvad" path="res://sprites/serrinha_1 .png" id="2_173p0"]
+
+[sub_resource type="Animation" id="Animation_wah8s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ay1rf"]
+resource_name = "default"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65n4s"]
+_data = {
+"RESET": SubResource("Animation_wah8s"),
+"default": SubResource("Animation_ay1rf")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f37c5"]
+size = Vector2(16, 16)
+
+[node name="Serrinha" type="StaticBody2D" groups=["bounce", "enemies"]]
+script = ExtResource("1_u5i51")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_173p0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_65n4s")
+}
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_f37c5")

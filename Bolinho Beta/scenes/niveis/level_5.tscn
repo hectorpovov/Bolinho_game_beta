@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bq28oeu61wufv"]
+
+[ext_resource type="PackedScene" uid="uid://bxa3f2d4ni1pp" path="res://cenario/fundo.tscn" id="1_c4fec"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="2_ut8rb"]
+[ext_resource type="PackedScene" uid="uid://cbl0dha5bb2eh" path="res://player/player.tscn" id="3_alb0i"]
+[ext_resource type="PackedScene" uid="uid://c0cw0if232oui" path="res://serras/serrinha.tscn" id="4_8ux6x"]
+[ext_resource type="PackedScene" uid="uid://bv3eu3a1uc5s7" path="res://serras/serrinha_suave.tscn" id="5_lvnuk"]
+[ext_resource type="PackedScene" uid="uid://mv0n8rfpu7q3" path="res://coletaveis/estrela.tscn" id="6_w18qj"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="7_11qkg"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Fundo" parent="." instance=ExtResource("1_c4fec")]
+
+[node name="parede" parent="." instance=ExtResource("2_ut8rb")]
+
+[node name="Player" parent="." instance=ExtResource("3_alb0i")]
+position = Vector2(26, 59)
+
+[node name="Serrinha" parent="." instance=ExtResource("4_8ux6x")]
+position = Vector2(27, 23)
+
+[node name="Serrinha2" parent="." instance=ExtResource("4_8ux6x")]
+position = Vector2(27, 107)
+
+[node name="Serrinha3" parent="." instance=ExtResource("4_8ux6x")]
+position = Vector2(230, 110)
+
+[node name="Serrinha4" parent="." instance=ExtResource("4_8ux6x")]
+position = Vector2(232, 22)
+
+[node name="Serrinha5" parent="." instance=ExtResource("4_8ux6x")]
+position = Vector2(133, 62)
+
+[node name="Serrinha_suave" parent="." instance=ExtResource("5_lvnuk")]
+position = Vector2(133, 22)
+
+[node name="estrela" parent="." instance=ExtResource("6_w18qj")]
+position = Vector2(86, 65)
+
+[node name="estrela2" parent="." instance=ExtResource("6_w18qj")]
+position = Vector2(131, 114)
+
+[node name="estrela3" parent="." instance=ExtResource("6_w18qj")]
+position = Vector2(190, 66)
+
+[node name="RestartEnd" parent="." instance=ExtResource("7_11qkg")]

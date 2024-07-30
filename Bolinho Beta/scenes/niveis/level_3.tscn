@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://deopmiwwd63sl"]
+
+[ext_resource type="PackedScene" uid="uid://bxa3f2d4ni1pp" path="res://cenario/fundo.tscn" id="1_qpa5b"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="2_2g1jq"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="2_q23sl"]
+[ext_resource type="PackedScene" uid="uid://cbl0dha5bb2eh" path="res://player/player.tscn" id="3_kwn0p"]
+[ext_resource type="PackedScene" uid="uid://c0cw0if232oui" path="res://serras/serrinha.tscn" id="4_7m0ee"]
+[ext_resource type="PackedScene" uid="uid://mv0n8rfpu7q3" path="res://coletaveis/estrela.tscn" id="5_vuk8a"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Fundo" parent="." instance=ExtResource("1_qpa5b")]
+
+[node name="parede" parent="." instance=ExtResource("2_q23sl")]
+
+[node name="Player" parent="." instance=ExtResource("3_kwn0p")]
+position = Vector2(26, 59)
+
+[node name="Serrinha" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(27, 22)
+
+[node name="Serrinha2" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(24, 108)
+
+[node name="Serrinha3" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(238, 111)
+
+[node name="Serrinha4" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(237, 21)
+
+[node name="Serrinha5" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(86, 62)
+
+[node name="Serrinha6" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(146, 63)
+
+[node name="Serrinha7" parent="." instance=ExtResource("4_7m0ee")]
+position = Vector2(199, 64)
+
+[node name="estrela" parent="." instance=ExtResource("5_vuk8a")]
+position = Vector2(115, 65)
+
+[node name="estrela2" parent="." instance=ExtResource("5_vuk8a")]
+position = Vector2(174, 65)
+
+[node name="estrela3" parent="." instance=ExtResource("5_vuk8a")]
+position = Vector2(235, 67)
+
+[node name="RestartEnd" parent="." instance=ExtResource("2_2g1jq")]

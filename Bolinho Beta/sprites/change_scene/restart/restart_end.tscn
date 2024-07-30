@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct3vufbjwlktd"]
+
+[sub_resource type="Animation" id="Animation_21084"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -0.788)]
+}
+
+[sub_resource type="Animation" id="Animation_sxdyb"]
+resource_name = "default"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(0.258816, 1),
+"update": 0,
+"values": [Vector2(0, -0.788), Vector2(0, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vqxcc"]
+_data = {
+"RESET": SubResource("Animation_21084"),
+"default": SubResource("Animation_sxdyb")
+}
+
+[node name="RestartEnd" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -0.788
+offset_right = 259.0
+offset_bottom = 127.212
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vqxcc")
+}
+autoplay = "default"

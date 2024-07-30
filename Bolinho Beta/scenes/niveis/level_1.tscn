@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4w74d1l18ut1"]
+
+[ext_resource type="PackedScene" uid="uid://bxa3f2d4ni1pp" path="res://cenario/fundo.tscn" id="1_8v554"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="1_r0ecl"]
+[ext_resource type="PackedScene" uid="uid://cbl0dha5bb2eh" path="res://player/player.tscn" id="2_mmyio"]
+[ext_resource type="PackedScene" uid="uid://mv0n8rfpu7q3" path="res://coletaveis/estrela.tscn" id="5_bc5ka"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="6_ptk76"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Fundo" parent="." instance=ExtResource("1_8v554")]
+
+[node name="parede" parent="." instance=ExtResource("1_r0ecl")]
+
+[node name="estrela" parent="." instance=ExtResource("5_bc5ka")]
+position = Vector2(135, 21)
+
+[node name="estrela2" parent="." instance=ExtResource("5_bc5ka")]
+position = Vector2(137, 113)
+
+[node name="estrela3" parent="." instance=ExtResource("5_bc5ka")]
+position = Vector2(236, 66)
+
+[node name="Player" parent="." instance=ExtResource("2_mmyio")]
+position = Vector2(37, 62)
+
+[node name="RestartEnd" parent="." instance=ExtResource("6_ptk76")]
+position = Vector2(0, 2)

@@ -1,0 +1,129 @@
+[gd_scene load_steps=6 format=3 uid="uid://qngpv50tweko"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nj5ys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8uar"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jshup"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl8gg"]
+size = Vector2(16, 125.584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rtbn"]
+size = Vector2(46, 4)
+
+[node name="parede" type="StaticBody2D" groups=["bounce"]]
+position = Vector2(521, 19)
+physics_material_override = SubResource("PhysicsMaterial_nj5ys")
+
+[node name="CollisionShape2Dcima" type="CollisionShape2D" parent="."]
+position = Vector2(-327, -23)
+scale = Vector2(31.5272, 1)
+shape = SubResource("RectangleShape2D_f8uar")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2Dcima"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.168627, 0.105882, 0.14902, 1)
+
+[node name="CollisionShape2D2baixo" type="CollisionShape2D" parent="."]
+position = Vector2(-353, 113)
+scale = Vector2(31.5272, 1)
+shape = SubResource("RectangleShape2D_f8uar")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D2baixo"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.168627, 0.105882, 0.14902, 1)
+
+[node name="CollisionShape2Ddireita" type="CollisionShape2D" parent="."]
+position = Vector2(-525, 183)
+scale = Vector2(1, 30.28)
+shape = SubResource("RectangleShape2D_jshup")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2Ddireita"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.168627, 0.105882, 0.14902, 1)
+
+[node name="CollisionShape2Desquerda" type="CollisionShape2D" parent="."]
+position = Vector2(-252, 46)
+scale = Vector2(2.11016, 0.999312)
+shape = SubResource("RectangleShape2D_kl8gg")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2Desquerda"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -7.58236
+offset_top = -75.3032
+offset_right = 8.41764
+offset_bottom = -59.3032
+grow_vertical = 2
+scale = Vector2(0.580839, 16.2971)
+color = Color(0.168627, 0.105882, 0.14902, 1)
+
+[node name="paredinha_baixo" type="CollisionShape2D" parent="."]
+position = Vector2(-494, 62)
+shape = SubResource("RectangleShape2D_3rtbn")
+
+[node name="ColorRect" type="ColorRect" parent="paredinha_baixo"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.168627, 0.105882, 0.14902, 1)
+
+[node name="paredinha_baixo2" type="CollisionShape2D" parent="."]
+position = Vector2(-494, 24)
+shape = SubResource("RectangleShape2D_3rtbn")
+
+[node name="ColorRect" type="ColorRect" parent="paredinha_baixo2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.168627, 0.105882, 0.14902, 1)

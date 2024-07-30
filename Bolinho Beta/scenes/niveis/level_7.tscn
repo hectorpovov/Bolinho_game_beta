@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgpwn06dikuw6"]
+
+[ext_resource type="PackedScene" uid="uid://bxa3f2d4ni1pp" path="res://cenario/fundo.tscn" id="1_l8but"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="2_n28h1"]
+[ext_resource type="PackedScene" uid="uid://cbl0dha5bb2eh" path="res://player/player.tscn" id="3_y7key"]
+[ext_resource type="PackedScene" uid="uid://c0cw0if232oui" path="res://serras/serrinha.tscn" id="4_4mwfm"]
+[ext_resource type="PackedScene" uid="uid://bv3eu3a1uc5s7" path="res://serras/serrinha_suave.tscn" id="5_ni3w8"]
+[ext_resource type="PackedScene" uid="uid://mv0n8rfpu7q3" path="res://coletaveis/estrela.tscn" id="6_qnrrp"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="7_xkflu"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Fundo" parent="." instance=ExtResource("1_l8but")]
+
+[node name="parede" parent="." instance=ExtResource("2_n28h1")]
+
+[node name="Player" parent="." instance=ExtResource("3_y7key")]
+position = Vector2(26, 59)
+
+[node name="Serrinha" parent="." instance=ExtResource("4_4mwfm")]
+position = Vector2(131, 63)
+
+[node name="Serrinha_suave" parent="." instance=ExtResource("5_ni3w8")]
+position = Vector2(132, 19)
+
+[node name="Serrinha_suave2" parent="." instance=ExtResource("5_ni3w8")]
+position = Vector2(131, 113)
+
+[node name="Serrinha_suave3" parent="." instance=ExtResource("5_ni3w8")]
+position = Vector2(224, 64)
+
+[node name="estrela" parent="." instance=ExtResource("6_qnrrp")]
+position = Vector2(226, 109)
+
+[node name="estrela2" parent="." instance=ExtResource("6_qnrrp")]
+position = Vector2(226, 19)
+
+[node name="estrela3" parent="." instance=ExtResource("6_qnrrp")]
+position = Vector2(163, 63)
+
+[node name="RestartEnd" parent="." instance=ExtResource("7_xkflu")]

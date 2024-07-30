@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbp37g23ybb0o"]
+
+[ext_resource type="PackedScene" uid="uid://bxa3f2d4ni1pp" path="res://cenario/fundo.tscn" id="1_hywmf"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="2_sq608"]
+[ext_resource type="PackedScene" uid="uid://cbl0dha5bb2eh" path="res://player/player.tscn" id="3_5cbqb"]
+[ext_resource type="PackedScene" uid="uid://c0cw0if232oui" path="res://serras/serrinha.tscn" id="4_0xkwk"]
+[ext_resource type="PackedScene" uid="uid://mv0n8rfpu7q3" path="res://coletaveis/estrela.tscn" id="5_5ng5k"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="6_8fqnu"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Fundo" parent="." instance=ExtResource("1_hywmf")]
+
+[node name="parede" parent="." instance=ExtResource("2_sq608")]
+
+[node name="Player" parent="." instance=ExtResource("3_5cbqb")]
+position = Vector2(26, 59)
+
+[node name="Serrinha" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(77, 22)
+
+[node name="Serrinha2" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(77, 108)
+
+[node name="Serrinha3" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(122, 65)
+
+[node name="Serrinha4" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(164, 23)
+
+[node name="Serrinha5" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(163, 108)
+
+[node name="Serrinha6" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(198, 66)
+
+[node name="Serrinha7" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(237, 23)
+
+[node name="Serrinha8" parent="." instance=ExtResource("4_0xkwk")]
+position = Vector2(237, 113)
+
+[node name="estrela" parent="." instance=ExtResource("5_5ng5k")]
+position = Vector2(79, 65)
+
+[node name="estrela2" parent="." instance=ExtResource("5_5ng5k")]
+position = Vector2(162, 66)
+
+[node name="estrela3" parent="." instance=ExtResource("5_5ng5k")]
+position = Vector2(237, 69)
+
+[node name="RestartEnd" parent="." instance=ExtResource("6_8fqnu")]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfiufs6di5jhx"]
+
+[ext_resource type="Script" path="res://scenes/niveis/end.gd" id="1_qviqo"]
+[ext_resource type="Texture2D" uid="uid://ted74l00bfpx" path="res://sprites/the_end.png" id="2_i2x6v"]
+[ext_resource type="Texture2D" uid="uid://cq165g55m1x64" path="res://sprites/reset_button.png" id="3_dg1xj"]
+[ext_resource type="Texture2D" uid="uid://xrnv27712hjw" path="res://sprites/exit_button.png" id="4_iiqv2"]
+[ext_resource type="PackedScene" uid="uid://ct3vufbjwlktd" path="res://sprites/change_scene/restart/restart_end.tscn" id="5_hil0y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7j44"]
+texture = ExtResource("3_dg1xj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5s6e"]
+texture = ExtResource("4_iiqv2")
+
+[node name="Level3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qviqo")
+
+[node name="TheEnd" type="Sprite2D" parent="."]
+position = Vector2(128, 64)
+texture = ExtResource("2_i2x6v")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 109.0
+offset_right = 253.0
+offset_bottom = 125.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r7j44")
+
+[node name="restart_button" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_right = -1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.16, 1)
+flat = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 109.0
+offset_right = 217.0
+offset_bottom = 125.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5s6e")
+
+[node name="quit_button" type="Button" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 16.0
+flat = true
+
+[node name="RestartEnd" parent="Panel2" instance=ExtResource("5_hil0y")]
+position = Vector2(-185, -109)

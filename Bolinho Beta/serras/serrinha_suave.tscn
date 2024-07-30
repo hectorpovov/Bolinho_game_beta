@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://bv3eu3a1uc5s7"]
+
+[ext_resource type="Script" path="res://serras/serrinha_suave.gd" id="1_x3i1x"]
+[ext_resource type="Texture2D" uid="uid://11aujqu2c1vb" path="res://sprites/serrinha_2.png" id="2_vjb3v"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0swv"]
+bounce = 1.0
+
+[sub_resource type="Animation" id="Animation_0dobr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_42pof"]
+resource_name = "default"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rowos"]
+_data = {
+"RESET": SubResource("Animation_0dobr"),
+"default": SubResource("Animation_42pof")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bc7p"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4lfh"]
+size = Vector2(7.61905, 5.71429)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1aj3"]
+size = Vector2(6, 8)
+
+[node name="Serrinha_suave" type="RigidBody2D" groups=["bounce", "enemies"]]
+physics_material_override = SubResource("PhysicsMaterial_d0swv")
+gravity_scale = 0.0
+script = ExtResource("1_x3i1x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 6.28319
+texture = ExtResource("2_vjb3v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_rowos")
+}
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_6bc7p")
+
+[node name="hitbox_area_x" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_area_x"]
+visible = false
+position = Vector2(1.78814e-07, 2.98023e-07)
+scale = Vector2(2.1, 2.1)
+shape = SubResource("RectangleShape2D_e4lfh")
+
+[node name="hitbox_area_y" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_area_y"]
+visible = false
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_h1aj3")

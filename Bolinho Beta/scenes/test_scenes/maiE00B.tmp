@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bovnoinoy2ck7"]
+
+[ext_resource type="PackedScene" uid="uid://ccqjt3l755xta" path="res://player/player.tscn" id="1_7jubt"]
+[ext_resource type="PackedScene" uid="uid://qngpv50tweko" path="res://cenario/parede_oculta.tscn" id="2_pcd71"]
+[ext_resource type="PackedScene" uid="uid://c0cw0if232oui" path="res://serras/serrinha.tscn" id="3_b3uku"]
+[ext_resource type="PackedScene" uid="uid://bjj7npr6hm3or" path="res://serras/serrinha_louca.tscn" id="4_kk6ob"]
+
+[node name="MainTest" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_7jubt")]
+position = Vector2(330, 270)
+speed = 4.0
+lerp_factor = null
+health = null
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="parede_oculta" parent="." instance=ExtResource("2_pcd71")]
+position = Vector2(527, 11)
+
+[node name="Serrinha" parent="." instance=ExtResource("3_b3uku")]
+position = Vector2(596, 304)
+
+[node name="Serrinha_louca" parent="." instance=ExtResource("4_kk6ob")]
+position = Vector2(557, 167)
+
+[node name="Serrinha_louca2" parent="." instance=ExtResource("4_kk6ob")]
+position = Vector2(825, 461)
